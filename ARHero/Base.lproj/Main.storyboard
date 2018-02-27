@@ -1,27 +1,302 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0pM-lf-VWf">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Bold</string>
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tXr-a1-R10">
+        <scene sceneID="AlS-vH-4J4">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arscnView>
+                <viewController storyboardIdentifier="game" id="11f-VZ-KxN" customClass="ViewController" customModule="ARHero" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SWm-Kq-NQq">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqz-Md-abV">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="助けてくれ" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf2-Fe-lDn">
+                                <rect key="frame" x="75" y="20" width="262" height="83"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="BPR-Hn-MjM"/>
+                                    <constraint firstAttribute="width" constant="262" id="uKc-1U-cCt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                <color key="textColor" red="0.99607308201058198" green="0.99607308201058198" blue="0.99607308201058198" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="y2b-tz-Mkr">
+                                <rect key="frame" x="303" y="157" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="ClJ-9i-cTo"/>
+                                    <constraint firstAttribute="height" constant="60" id="SPf-qS-lqa"/>
+                                    <constraint firstAttribute="width" secondItem="y2b-tz-Mkr" secondAttribute="height" multiplier="1:1" id="Sxb-03-lln"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAp-K1-Zre">
+                                <rect key="frame" x="94" y="88" width="479" height="199"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="v4P-fj-fMZ">
+                                        <rect key="frame" x="282" y="53" width="147" height="93"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="壊した隕石の数 12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOZ-sQ-33q">
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="22.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ヒーローレベル : 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wF-g7-fvl">
+                                                <rect key="frame" x="8.5" y="22.5" width="130.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🚀🚀" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lh1-Ae-9fI">
+                                                <rect key="frame" x="50.5" y="42" width="46" height="26"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSd-sh-tUm">
+                                                <rect key="frame" x="28.5" y="68" width="90" height="25"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                                <state key="normal" title="スコアをシェアする">
+                                                    <color key="titleColor" red="0.996073082" green="0.996073082" blue="0.996073082" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="147" id="4Ne-fE-mxb"/>
+                                            <constraint firstAttribute="height" constant="93" id="PN3-7f-2wn"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Nbd-es-Sax">
+                                        <rect key="frame" x="53" y="52" width="166" height="93.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8F-G3-F4J">
+                                                <rect key="frame" x="0.0" y="0.0" width="166" height="38.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHv-FR-DAg">
+                                                <rect key="frame" x="32" y="58.5" width="102" height="35"/>
+                                                <color key="backgroundColor" red="0.40029157670732751" green="0.37464586568258929" blue="0.99600074404761907" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                <state key="normal" title="もう一度遊ぶ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playAgain:" destination="11f-VZ-KxN" eventType="touchUpInside" id="n8s-8k-FKw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="93.5" id="5Jb-Si-jn8"/>
+                                            <constraint firstAttribute="width" constant="166" id="5fd-7B-Zeg"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Nbd-es-Sax" firstAttribute="centerY" secondItem="v4P-fj-fMZ" secondAttribute="centerY" id="Dly-aj-a59"/>
+                                    <constraint firstItem="Nbd-es-Sax" firstAttribute="top" secondItem="VAp-K1-Zre" secondAttribute="top" constant="52" id="I6p-8B-a9x"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nbd-es-Sax" secondAttribute="bottom" constant="53.5" id="NF0-yS-i6Q"/>
+                                    <constraint firstItem="v4P-fj-fMZ" firstAttribute="top" secondItem="VAp-K1-Zre" secondAttribute="top" constant="53" id="SCi-Xe-FwO"/>
+                                    <constraint firstAttribute="bottom" secondItem="v4P-fj-fMZ" secondAttribute="bottom" constant="53" id="Yu9-kx-rBc"/>
+                                    <constraint firstItem="Nbd-es-Sax" firstAttribute="leading" secondItem="VAp-K1-Zre" secondAttribute="leading" constant="53" id="t7n-nv-yJ9"/>
+                                    <constraint firstAttribute="trailing" secondItem="v4P-fj-fMZ" secondAttribute="trailing" constant="50" id="uqD-29-drY"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YvT-kM-JMq">
+                                <rect key="frame" x="562" y="20" width="85" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="壊した隕石" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwZ-Cx-Fhz">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf7-u1-daz">
+                                        <rect key="frame" x="0.0" y="22.5" width="85" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="mhE-i9-okG"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0S9-Yh-FGU">
+                                <rect key="frame" x="429" y="20" width="119" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="残りのミサイル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iB-yi-09h">
+                                        <rect key="frame" x="0.0" y="0.0" width="119" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eam-K8-cS2">
+                                        <rect key="frame" x="53.5" y="22.5" width="12" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0FZ-Rg-aoN"/>
+                                    <constraint firstAttribute="width" constant="119" id="g1Z-QI-KSX"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👨🏻‍🚀" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcs-Cv-Ixs">
+                                <rect key="frame" x="8" y="29" width="59" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="0OV-SL-LE3"/>
+                                    <constraint firstAttribute="width" constant="59" id="RQ3-f7-YKP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cock.png" translatesAutoresizingMaskIntoConstraints="NO" id="40Q-qU-E5J">
+                                <rect key="frame" x="0.0" y="41" width="667" height="375"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VAp-K1-Zre" firstAttribute="centerX" secondItem="SWm-Kq-NQq" secondAttribute="centerX" id="14q-Hh-KA7"/>
+                            <constraint firstItem="sqz-Md-abV" firstAttribute="top" secondItem="SWm-Kq-NQq" secondAttribute="top" id="1yM-rc-3tg"/>
+                            <constraint firstItem="hf2-Fe-lDn" firstAttribute="leading" secondItem="Hcs-Cv-Ixs" secondAttribute="trailing" constant="8" id="3lB-1u-23D"/>
+                            <constraint firstItem="40Q-qU-E5J" firstAttribute="top" secondItem="vmV-Km-woE" secondAttribute="top" constant="41" id="CSD-GS-vAa"/>
+                            <constraint firstItem="hf2-Fe-lDn" firstAttribute="top" secondItem="vmV-Km-woE" secondAttribute="top" constant="20" id="H0m-t3-1QU"/>
+                            <constraint firstItem="Hcs-Cv-Ixs" firstAttribute="leading" secondItem="vmV-Km-woE" secondAttribute="leading" constant="8" id="Hky-PY-hUN"/>
+                            <constraint firstItem="Hcs-Cv-Ixs" firstAttribute="top" secondItem="vmV-Km-woE" secondAttribute="top" constant="29" id="K8m-SY-hic"/>
+                            <constraint firstItem="40Q-qU-E5J" firstAttribute="leading" secondItem="vmV-Km-woE" secondAttribute="leading" id="Osb-Zo-9Hj"/>
+                            <constraint firstItem="VAp-K1-Zre" firstAttribute="centerY" secondItem="SWm-Kq-NQq" secondAttribute="centerY" id="Qlo-mm-PiV"/>
+                            <constraint firstItem="VAp-K1-Zre" firstAttribute="leading" secondItem="vmV-Km-woE" secondAttribute="leading" constant="94" id="Rzo-vI-C7J"/>
+                            <constraint firstItem="sqz-Md-abV" firstAttribute="bottom" secondItem="vmV-Km-woE" secondAttribute="bottom" id="aHz-Vg-e4t"/>
+                            <constraint firstItem="0S9-Yh-FGU" firstAttribute="top" secondItem="vmV-Km-woE" secondAttribute="top" constant="20" id="fNT-Gl-OzG"/>
+                            <constraint firstItem="40Q-qU-E5J" firstAttribute="trailing" secondItem="vmV-Km-woE" secondAttribute="trailing" id="gJS-zR-NcK"/>
+                            <constraint firstItem="VAp-K1-Zre" firstAttribute="top" secondItem="YvT-kM-JMq" secondAttribute="bottom" constant="23" id="iVB-Wk-ehn"/>
+                            <constraint firstItem="YvT-kM-JMq" firstAttribute="leading" secondItem="0S9-Yh-FGU" secondAttribute="trailing" constant="14" id="jA7-OE-SyY"/>
+                            <constraint firstItem="40Q-qU-E5J" firstAttribute="bottom" secondItem="vmV-Km-woE" secondAttribute="bottom" constant="41" id="jdj-oS-9Yi"/>
+                            <constraint firstItem="y2b-tz-Mkr" firstAttribute="centerX" secondItem="SWm-Kq-NQq" secondAttribute="centerX" id="qA0-g8-yDn"/>
+                            <constraint firstItem="YvT-kM-JMq" firstAttribute="top" secondItem="vmV-Km-woE" secondAttribute="top" constant="20" id="qyp-0c-AwV"/>
+                            <constraint firstItem="sqz-Md-abV" firstAttribute="leading" secondItem="vmV-Km-woE" secondAttribute="leading" id="sgH-QL-AdV"/>
+                            <constraint firstItem="y2b-tz-Mkr" firstAttribute="centerY" secondItem="SWm-Kq-NQq" secondAttribute="centerY" id="tNA-aa-boO"/>
+                            <constraint firstItem="sqz-Md-abV" firstAttribute="trailing" secondItem="vmV-Km-woE" secondAttribute="trailing" id="to6-ya-I29"/>
+                            <constraint firstItem="vmV-Km-woE" firstAttribute="trailing" secondItem="YvT-kM-JMq" secondAttribute="trailing" constant="20" id="tov-4y-hWk"/>
+                            <constraint firstItem="vmV-Km-woE" firstAttribute="trailing" secondItem="VAp-K1-Zre" secondAttribute="trailing" constant="94" id="uq6-qB-7Az"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vmV-Km-woE"/>
+                    </view>
                     <connections>
-                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="bagde" destination="Lh1-Ae-9fI" id="1HC-Jr-a7k"/>
+                        <outlet property="clearedMeteror" destination="pOZ-sQ-33q" id="4bE-gV-XAG"/>
+                        <outlet property="demolishedMeterorNumber" destination="uf7-u1-daz" id="64u-q1-jgy"/>
+                        <outlet property="earthStateNotification" destination="hf2-Fe-lDn" id="6rF-Hx-YEs"/>
+                        <outlet property="gameOverView" destination="VAp-K1-Zre" id="saV-d9-xxx"/>
+                        <outlet property="heroLevel" destination="7wF-g7-fvl" id="pA3-0q-bKH"/>
+                        <outlet property="leftMissileNumber" destination="eam-K8-cS2" id="Pqo-mt-YSb"/>
+                        <outlet property="playAgainButton" destination="sHv-FR-DAg" id="SRu-MB-Tpv"/>
+                        <outlet property="sceneView" destination="sqz-Md-abV" id="JbE-W0-MXb"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QEO-sh-IfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="428.63568215892059" y="69.599999999999994"/>
+        </scene>
+        <!--On Board Ship View Controller-->
+        <scene sceneID="x4r-Uf-zNW">
+            <objects>
+                <viewController storyboardIdentifier="ship" id="zC2-bf-hj9" customClass="OnBoardShipViewController" customModule="ARHero" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bc0-pT-Uo9">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bE6-7Y-o01">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bE6-7Y-o01" firstAttribute="leading" secondItem="Nfp-fc-iPU" secondAttribute="leading" id="OGi-lZ-PxG"/>
+                            <constraint firstItem="bE6-7Y-o01" firstAttribute="bottom" secondItem="Nfp-fc-iPU" secondAttribute="bottom" id="WIp-UK-DkK"/>
+                            <constraint firstItem="bE6-7Y-o01" firstAttribute="top" secondItem="bc0-pT-Uo9" secondAttribute="top" id="cam-aJ-c93"/>
+                            <constraint firstItem="bE6-7Y-o01" firstAttribute="trailing" secondItem="Nfp-fc-iPU" secondAttribute="trailing" id="zHi-cd-sCf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nfp-fc-iPU"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="bE6-7Y-o01" id="vfC-Vq-Iol"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjh-R5-17L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-251" y="70"/>
+        </scene>
+        <!--Initial View Controller-->
+        <scene sceneID="wL6-cI-AYd">
+            <objects>
+                <viewController id="0pM-lf-VWf" customClass="InitialViewController" customModule="ARHero" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sn8-BW-Z8a">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="UwV-A9-I7J">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ARHero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndo-mK-eyT">
+                                <rect key="frame" x="219" y="122" width="226" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="57"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ls-g0-WNy">
+                                <rect key="frame" x="219" y="278" width="227" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40029157669999998" green="0.37464586570000002" blue="0.99600074400000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <state key="normal" title="スタート">
+                                    <color key="titleColor" red="0.996073082" green="0.996073082" blue="0.996073082" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="startMissionPressed:" destination="0pM-lf-VWf" eventType="touchUpInside" id="Rf7-ig-2Ql"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Wma-m4-rXC"/>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="8ls-g0-WNy" id="a6l-A1-aZX"/>
+                        <segue destination="zC2-bf-hj9" kind="show" id="gHa-FB-coF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coy-Bt-K2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-994.45277361319347" y="69.599999999999994"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg.png" width="3200" height="1800"/>
+        <image name="circle.png" width="512" height="512"/>
+        <image name="cock.png" width="1280" height="720"/>
+    </resources>
 </document>
